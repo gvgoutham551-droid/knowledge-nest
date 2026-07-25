@@ -1,0 +1,698 @@
+/* ==========================================
+                CONTACT SECTION
+========================================== */
+
+.section {
+  position: relative;
+  padding: 120px 0;
+  background: #f8fbff;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: -180px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.06);
+  filter: blur(120px);
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  right: -180px;
+  bottom: -180px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.05);
+  filter: blur(130px);
+}
+
+.container {
+  width: min(1280px, 92%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================
+                HEADING
+========================================== */
+
+.heading {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, .08);
+  border: 1px solid rgba(37, 99, 235, .15);
+  color: #2563eb;
+  font-size: .95rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.heading h2 {
+  font-size: clamp(2.7rem,5vw,4rem);
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.heading h2 span {
+  color: #2563eb;
+}
+
+.heading p {
+  color: #64748b;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+/* ==========================================
+                TOP GRID
+========================================== */
+
+.topGrid {
+
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 35px;
+
+  align-items: stretch;
+
+  margin-bottom: 70px;
+
+}
+
+/* ==========================================
+                INFO CARD
+========================================== */
+
+.infoCard {
+
+  background: #fff;
+
+  border-radius: 28px;
+
+  padding: 35px;
+
+  border: 1px solid #edf2f7;
+
+  box-shadow: 0 15px 40px rgba(15,23,42,.05);
+
+}
+
+.info {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #edf2f7;
+
+}
+
+.info:last-child {
+
+  border-bottom: none;
+
+}
+
+.icon {
+
+  width: 60px;
+
+  height: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+  );
+
+  color: white;
+
+  font-size: 1.35rem;
+
+  box-shadow: 0 12px 28px rgba(37,99,235,.22);
+
+}
+
+.infoContent{
+
+flex:1;
+
+min-width:0;
+
+}
+
+.info h4{
+
+font-size:1.2rem;
+
+color:#0f172a;
+
+margin-bottom:6px;
+
+}
+
+.info p{
+
+color:#64748b;
+
+line-height:1.7;
+
+word-break:break-word;
+
+overflow-wrap:anywhere;
+
+}
+
+/* ==========================================
+                    MAP
+========================================== */
+
+.map{
+
+overflow:hidden;
+
+border-radius:28px;
+
+background:#fff;
+
+border:1px solid #edf2f7;
+
+box-shadow:0 15px 40px rgba(15,23,42,.05);
+
+}
+
+.map iframe{
+
+width:100%;
+
+height:100%;
+
+min-height:420px;
+
+display:block;
+
+border:none;
+
+}
+
+/* ==========================================
+                FORM CARD
+========================================== */
+
+.formCard{
+
+background:#fff;
+
+border-radius:28px;
+
+padding:45px;
+
+border:1px solid #edf2f7;
+
+box-shadow:0 15px 40px rgba(15,23,42,.05);
+
+}
+
+.formCard h3{
+
+font-size:2rem;
+
+color:#0f172a;
+
+margin-bottom:12px;
+
+}
+
+.formCard p{
+
+color:#64748b;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+/* ==========================================
+                FORM
+========================================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid #dbe4f0;
+  background: #ffffff;
+  outline: none;
+  font-size: 1rem;
+  color: #0f172a;
+  transition: all .3s ease;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 170px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 5px rgba(37,99,235,.12);
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+.form button {
+
+  width: fit-content;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 16px 32px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+      135deg,
+      #2563eb,
+      #4f46e5
+  );
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: .3s ease;
+
+  box-shadow:0 12px 30px rgba(37,99,235,.25);
+
+}
+
+.form button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 18px 40px rgba(37,99,235,.3);
+
+}
+
+/* ==========================================
+                TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.section{
+
+padding:100px 0;
+
+}
+
+.topGrid{
+
+grid-template-columns:1fr;
+
+gap:28px;
+
+}
+
+.infoCard,
+.formCard{
+
+padding:32px;
+
+}
+
+.map iframe{
+
+min-height:340px;
+
+}
+
+}
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.section{
+
+padding:80px 0;
+
+}
+
+.heading{
+
+margin-bottom:45px;
+
+}
+
+.heading h2{
+
+font-size:2.2rem;
+
+}
+
+.heading p{
+
+font-size:1rem;
+
+}
+
+.topGrid{
+
+gap:24px;
+
+margin-bottom:45px;
+
+}
+
+.infoCard{
+
+padding:24px 20px;
+
+border-radius:22px;
+
+}
+
+.info{
+
+padding:18px 0;
+
+gap:14px;
+
+}
+
+.icon{
+
+width:54px;
+
+height:54px;
+
+font-size:1.2rem;
+
+border-radius:16px;
+
+}
+
+.info h4{
+
+font-size:1.1rem;
+
+}
+
+.info p{
+
+font-size:.95rem;
+
+line-height:1.6;
+
+}
+
+.map{
+
+border-radius:22px;
+
+}
+
+.map iframe{
+
+min-height:260px;
+
+}
+
+.formCard{
+
+padding:28px 22px;
+
+border-radius:22px;
+
+}
+
+.formCard h3{
+
+font-size:1.7rem;
+
+}
+
+.formCard p{
+
+font-size:.96rem;
+
+margin-bottom:28px;
+
+}
+
+.form{
+
+gap:16px;
+
+}
+
+.form input,
+.form textarea{
+
+padding:15px 16px;
+
+font-size:.95rem;
+
+}
+
+.form textarea{
+
+min-height:140px;
+
+}
+
+.form button{
+
+width:100%;
+
+padding:15px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media(max-width:500px){
+
+.container{
+
+width:min(94%,1280px);
+
+}
+
+.heading h2{
+
+font-size:1.9rem;
+
+}
+
+.heading p{
+
+font-size:.95rem;
+
+}
+
+.badge{
+
+font-size:.82rem;
+
+padding:8px 14px;
+
+}
+
+.infoCard{
+
+padding:20px 16px;
+
+}
+
+.info{
+
+gap:12px;
+
+}
+
+.icon{
+
+width:48px;
+
+height:48px;
+
+font-size:1.05rem;
+
+}
+
+.info h4{
+
+font-size:1rem;
+
+}
+
+.info p{
+
+font-size:.9rem;
+
+}
+
+.map iframe{
+
+min-height:220px;
+
+}
+
+.formCard{
+
+padding:22px 18px;
+
+}
+
+.formCard h3{
+
+font-size:1.45rem;
+
+}
+
+.form input,
+.form textarea{
+
+padding:14px;
+
+font-size:.92rem;
+
+}
+
+.form button{
+
+font-size:.95rem;
+
+}
+
+}
+
+/* ==========================================
+            EXTRA SMALL DEVICES
+========================================== */
+
+@media(max-width:360px){
+
+.section{
+
+padding:70px 0;
+
+}
+
+.heading h2{
+
+font-size:1.7rem;
+
+}
+
+.icon{
+
+width:44px;
+
+height:44px;
+
+font-size:1rem;
+
+}
+
+.info h4{
+
+font-size:.95rem;
+
+}
+
+.info p{
+
+font-size:.85rem;
+
+}
+
+.map iframe{
+
+min-height:200px;
+
+}
+
+.formCard{
+
+padding:18px 14px;
+
+}
+
+.formCard h3{
+
+font-size:1.3rem;
+
+}
+
+}

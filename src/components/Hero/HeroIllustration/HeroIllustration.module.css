@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    rgba(37, 99, 235, 0.22),
+    transparent 70%
+  );
+
+  filter: blur(50px);
+
+  z-index: 1;
+}
+
+.image {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+
+  object-fit: contain;
+
+  z-index: 2;
+
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+@media(max-width:992px){
+
+.container{
+
+order:2;
+
+}
+
+.image{
+
+max-width:340px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.image{
+
+max-width:280px;
+
+}
+
+}

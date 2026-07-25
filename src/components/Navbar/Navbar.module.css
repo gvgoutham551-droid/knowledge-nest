@@ -1,0 +1,676 @@
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.container {
+  width: min(1380px, 95%);
+  height: 96px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 36px;
+
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.35s ease;
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  user-select: none;
+}
+
+.logoImage {
+  width: 96px;
+  height: 96px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  transition: all 0.35s ease;
+}
+
+.logo:hover .logoImage {
+  transform: rotate(-3deg) scale(1.08);
+}
+
+.logoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoContent h2 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  letter-spacing: -1px;
+
+  line-height: 1;
+}
+
+.logoContent p {
+  margin-top: 6px;
+
+  font-size: 13px;
+
+  color: #64748b;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+            DESKTOP NAVIGATION
+========================================== */
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.desktopNav a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #475569;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: all 0.35s ease;
+}
+
+.desktopNav a:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.desktopNav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -12px;
+
+  width: 0;
+
+  height: 3px;
+
+  background: #2563eb;
+
+  border-radius: 50px;
+
+  transform: translateX(-50%);
+
+  transition: all 0.35s ease;
+}
+
+.desktopNav a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+                RIGHT SECTION
+========================================== */
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ==========================================
+                CTA BUTTON
+========================================== */
+
+.demoBtn {
+  height: 60px;
+
+  padding: 0 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  text-decoration: none;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.28);
+
+  transition: all 0.35s ease;
+}
+
+.demoBtn:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 22px 48px rgba(37, 99, 235, 0.35);
+}
+
+.demoBtn svg {
+  font-size: 18px;
+
+  transition: all 0.35s ease;
+}
+
+.demoBtn:hover svg {
+  transform: translateX(5px);
+}
+
+.demoBtn:active {
+  transform: scale(.97);
+}
+
+/* ==========================================
+            MOBILE MENU BUTTON
+========================================== */
+
+.mobileBtn {
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.mobileBtn svg {
+  font-size: 34px;
+
+  color: #0f172a;
+
+  transition: all 0.35s ease;
+}
+
+/* ==========================================
+              MOBILE MENU
+========================================== */
+
+.mobileMenu {
+  position: fixed;
+
+  top: 112px;
+  left: 50%;
+
+  transform: translateX(-50%) scale(0.95);
+
+  width: min(92%, 420px);
+
+  padding: 28px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+
+  z-index: 999;
+
+  overflow: hidden;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+
+  color: #0f172a;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.mobileMenu a:hover {
+  color: #2563eb;
+}
+
+.mobileDemo {
+  margin-top: 10px;
+
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  border-radius: 14px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.mobileDemo:hover {
+  background: #1d4ed8;
+}
+
+.showMenu {
+  opacity: 1;
+
+  pointer-events: auto;
+
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==========================================
+        RESPONSIVE - LARGE TABLETS
+========================================== */
+
+@media (max-width:1200px){
+
+.container{
+
+width:95%;
+
+height:90px;
+
+padding:0 28px;
+
+}
+
+.logoImage{
+
+width:84px;
+
+height:84px;
+
+}
+
+.logoContent h2{
+
+font-size:30px;
+
+}
+
+.logoContent p{
+
+font-size:12px;
+
+}
+
+.desktopNav{
+
+gap:34px;
+
+}
+
+.demoBtn{
+
+height:56px;
+
+padding:0 28px;
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+                TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.desktopNav{
+
+display:none;
+
+}
+
+.demoBtn{
+
+display:none;
+
+}
+
+.mobileBtn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.container{
+
+height:84px;
+
+padding:0 24px;
+
+}
+
+.logo{
+
+gap:10px;
+
+}
+
+.logoImage{
+
+width:72px;
+
+height:72px;
+
+}
+
+.logoContent h2{
+
+font-size:27px;
+
+}
+
+.logoContent p{
+
+font-size:11px;
+
+}
+
+.mobileMenu{
+
+top:104px;
+
+}
+
+}
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.navbar{
+
+top:12px;
+
+}
+
+.container{
+
+height:76px;
+
+padding:0 18px;
+
+border-radius:20px;
+
+}
+
+.logo{
+
+gap:8px;
+
+}
+
+.logoImage{
+
+width:66px;
+
+height:66px;
+
+}
+
+.logoContent h2{
+
+font-size:22px;
+
+}
+
+.logoContent p{
+
+font-size:10px;
+
+margin-top:3px;
+
+}
+
+.mobileBtn svg{
+
+font-size:30px;
+
+}
+
+.mobileMenu{
+
+width:92%;
+
+top:92px;
+
+padding:22px;
+
+border-radius:18px;
+
+}
+
+.mobileMenu a{
+
+font-size:16px;
+
+}
+
+.mobileDemo{
+
+height:50px;
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.container{
+
+padding:0 14px;
+
+height:72px;
+
+}
+
+.logo{
+
+gap:6px;
+
+}
+
+.logoImage{
+
+width:56px;
+
+height:56px;
+
+}
+
+.logoContent h2{
+
+font-size:18px;
+
+}
+
+.logoContent p{
+
+display:none;
+
+}
+
+.mobileBtn svg{
+
+font-size:28px;
+
+}
+
+.mobileMenu{
+
+padding:18px;
+
+}
+
+}
+
+/* ==========================================
+            EXTRA SMALL
+========================================== */
+
+@media (max-width:360px){
+
+.container{
+
+height:68px;
+
+}
+
+.logoImage{
+
+width:50px;
+
+height:50px;
+
+}
+
+.logoContent h2{
+
+font-size:16px;
+
+}
+
+.mobileBtn svg{
+
+font-size:26px;
+
+}
+
+}
+
+/* ==========================================
+            SMOOTH EFFECTS
+========================================== */
+
+.logoImage,
+.demoBtn,
+.desktopNav a,
+.mobileMenu,
+.mobileBtn svg{
+
+transition:all .35s ease;
+
+}
+
+.desktopNav a{
+
+letter-spacing:.2px;
+
+}
+
+.desktopNav a:hover{
+
+letter-spacing:.4px;
+
+}
+
+/* ==========================================
+        OPTIONAL SCROLLED NAVBAR
+========================================== */
+
+.navbar.scrolled .container{
+
+height:84px;
+
+background:rgba(255,255,255,.94);
+
+box-shadow:0 20px 55px rgba(15,23,42,.12);
+
+border:1px solid rgba(255,255,255,.85);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+}
+
+.navbar.scrolled .logoImage{
+
+width:82px;
+
+height:82px;
+
+}
