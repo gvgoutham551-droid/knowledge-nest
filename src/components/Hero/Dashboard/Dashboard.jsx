@@ -79,10 +79,10 @@ const Dashboard = () => {
             <p>Join the next batch today.</p>
           </div>
 
-          <button>
+          <a href="#contact" className={styles.applyBtn}>
             Apply Now
             <FiArrowRight />
-          </button>
+          </a>
         </div>
       </div>
     </div>
