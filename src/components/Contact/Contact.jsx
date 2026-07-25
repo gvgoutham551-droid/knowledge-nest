@@ -177,7 +177,7 @@ const Contact = () => {
 
               <div className={styles.infoContent}>
                 <h4>Email</h4>
-                <p>knowledgenestacademy@gmail.com</p>
+                <p>knowledgenestacademydgl@gmail.com</p>
               </div>
 
             </div>

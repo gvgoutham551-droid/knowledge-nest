@@ -7,7 +7,7 @@ const HeroContent = () => {
     <div className={styles.heroContent}>
       {/* Badge */}
       <div className={styles.badge} id="home">
-        🎓 Dindigul's best tutorial academy
+        🎓 Dindigul's Best Tutorial Academy
       </div>
 
       {/* Heading */}
@@ -30,10 +30,10 @@ const HeroContent = () => {
 
       {/* Buttons */}
       <div className={styles.buttonGroup}>
-        <button className={styles.primaryBtn}>
+        <a href="#programs" className={styles.primaryBtn}>
           Explore Programs
           <FiArrowRight />
-        </button>
+        </a>
 
         <button className={styles.secondaryBtn}>
           <FiPlayCircle />

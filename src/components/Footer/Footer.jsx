@@ -81,12 +81,12 @@ const Footer = () => {
 
             <div className={styles.contactItem}>
               <FiPhone />
-              <span>+91 XXXXXXXXXX</span>
+              <span>+91 9715609441</span>
             </div>
 
             <div className={styles.contactItem}>
               <FiMail />
-              <span>knowledgenestacademy@gmail.com</span>
+              <span>knowledgenestacademydgl@gmail.com</span>
             </div>
 
             <div className={styles.contactItem}>

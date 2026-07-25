@@ -1,4 +1,3 @@
-
 import styles from "./WhyChoose.module.css";
 import illustration from "../../assets/images/hero-illustration.png";
 
@@ -92,10 +91,10 @@ const WhyChoose = () => {
             ))}
           </div>
 
-          <button>
+          <a href="#contact" className={styles.joinBtn}>
             Join Knowledge Nest
             <FiArrowRight />
-          </button>
+          </a>
 
         </div>
 
